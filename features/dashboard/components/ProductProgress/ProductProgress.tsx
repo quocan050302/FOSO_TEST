@@ -1,11 +1,12 @@
 import { Calendar, ChevronDown } from 'lucide-react';
 import React from 'react';
+import { ProductionPieChart } from './ProductionPieChart';
 
 const ProductProgress = () => {
   return (
     <div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white border rounded-lg p-4 shadow-sm">
+        <div className="bg-white  rounded-lg p-6 shadow-of-card">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-medium">Tình Hình Sản Xuất</h2>
             <div className="flex items-center space-x-2 bg-white border rounded-md px-3 py-1.5 text-sm">
@@ -15,7 +16,7 @@ const ProductProgress = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            {/* <ProductionPieChart /> */}
+            <ProductionPieChart />
           </div>
           <div className="grid grid-cols-3 gap-2 mt-4 text-center">
             <div className="bg-gray-50 p-3 rounded-md">
@@ -33,7 +34,7 @@ const ProductProgress = () => {
           </div>
         </div>
 
-        <div className="bg-white border rounded-lg p-4 shadow-sm">
+        <div className="bg-white rounded-lg p-6 shadow-of-card">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-medium">Tiến Độ Sản Xuất Theo Nhóm</h2>
             <div className="flex items-center space-x-2 bg-white border rounded-md px-3 py-1.5 text-sm">
