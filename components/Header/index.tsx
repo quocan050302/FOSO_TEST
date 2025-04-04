@@ -18,7 +18,7 @@ import user from '../../public/assets/images/user.png';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-header text-white sticky top-0 left-0">
+    <header className="bg-header text-white sticky top-0 left-0 z-[1000]">
       <div className="container mx-auto py-4 flex items-center justify-between">
         <div className="flex items-center space-x-8">
           <Link href="/">

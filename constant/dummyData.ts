@@ -1,6 +1,8 @@
 import {
   TCategory,
   TCustomer,
+  TPieData,
+  TProgressData,
   TTopProduct,
 } from '@/features/dashboard/typings';
 
@@ -26,4 +28,20 @@ export const customers: TCustomer[] = [
   { name: 'Outlet Lemon squeeze', value: 2500 },
   { name: 'Shop quần áo streetwear New', value: 2100 },
   { name: 'Shop thời trang công sở Basic Office', value: 1900 },
+];
+
+export const productMethod: TPieData[] = [
+  { name: 'Đang sản xuất', value: 40, color: '#3276fa' },
+  { name: 'Chưa hoàn thành', value: 30, color: '#ff8f0d' },
+  { name: 'Hoàn thành', value: 30, color: '#1fc583' },
+];
+
+export const progressData: TProgressData[] = [
+  { name: 'Áo sơ mi dài tay', total: 123, completed: 62, percent: 50 },
+  { name: 'Áo sơ mi cụt tay', total: 321, completed: 241, percent: 75 },
+  { name: 'Quần baggy', total: 231, completed: 104, percent: 45 },
+  { name: 'Quần tây', total: 999, completed: 799, percent: 80 },
+  { name: 'Đầm maxi', total: 876, completed: 788, percent: 90 },
+  { name: 'Áo hoodie', total: 765, completed: 115, percent: 15 },
+  { name: 'Áo khoác bomber', total: 543, completed: 130, percent: 24 },
 ];
