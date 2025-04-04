@@ -1,0 +1,8 @@
+.shadow-of-card {
+  border-radius: var(--card-radius, 16px);
+  background: var(--background-paper, #fff);
+  box-shadow: var(--card-x1, 0px) var(--card-y1, 0px) var(--card-blur1, 2px)
+      var(--card-spread1, 0px) var(--shadow-20, rgba(145, 158, 171, 0.2)),
+    var(--card-x2, 0px) var(--card-y2, 12px) var(--card-blur2, 24px)
+      var(--card-spread2, -4px) var(--shadow-12, rgba(145, 158, 171, 0.12));
+}
