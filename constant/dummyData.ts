@@ -1,6 +1,7 @@
 import {
   TCategory,
   TCustomer,
+  TMaterial,
   TPieData,
   TProgressData,
   TTopProduct,
@@ -44,4 +45,47 @@ export const progressData: TProgressData[] = [
   { name: 'Đầm maxi', total: 876, completed: 788, percent: 90 },
   { name: 'Áo hoodie', total: 765, completed: 115, percent: 15 },
   { name: 'Áo khoác bomber', total: 543, completed: 130, percent: 24 },
+];
+
+export const materials: TMaterial[] = [
+  {
+    id: 1,
+    name: 'Chỉ cotton',
+    code: 'NYL_000014',
+    type: '(none)',
+    unit: 'Cuộn',
+    quantity: 8,
+  },
+  {
+    id: 2,
+    name: 'Vải lụa',
+    code: 'NYL_000034',
+    type: '(none)',
+    unit: 'Mét',
+    quantity: 8,
+  },
+  {
+    id: 3,
+    name: 'Vải lót',
+    code: 'NYL_000024',
+    type: '(none)',
+    unit: 'Mét',
+    quantity: 8,
+  },
+  {
+    id: 4,
+    name: 'Vải chống thấm',
+    code: 'NYL_000014',
+    type: '(none)',
+    unit: 'Mét',
+    quantity: 8,
+  },
+  {
+    id: 5,
+    name: 'Vải nỉ',
+    code: 'NYL_000014',
+    type: '(none)',
+    unit: 'Mét',
+    quantity: 8,
+  },
 ];

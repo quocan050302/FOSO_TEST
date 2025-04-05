@@ -1,11 +1,19 @@
+'use client';
 import CustomPieChartLabel from '@/features/dashboard/components/ProductProgress/CustomPieChartLabel';
 import { TPieChart } from '@/features/dashboard/typings';
-import React from 'react';
-import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
+import React, { useEffect, useState } from 'react';
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
 const CustomPieChart: React.FC<TPieChart> = ({ data, centerText }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
   return (
-    <PieChart width={600} height={300}>
+    <PieChart width={500} height={300}>
       <Pie
         data={data}
         dataKey="value"
@@ -22,6 +30,15 @@ const CustomPieChart: React.FC<TPieChart> = ({ data, centerText }) => {
           <Cell key={`cell-${index}`} fill={entry.color} />
         ))}
       </Pie>
+      <Tooltip
+        formatter={(value: number, name: string) => [`${value}`, `${name}`]}
+        contentStyle={{
+          backgroundColor: 'white',
+          borderRadius: '8px',
+          border: '1px solid #e5e7eb',
+          fontSize: '0.875rem',
+        }}
+      />
     </PieChart>
   );
 };

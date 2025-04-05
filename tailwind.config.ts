@@ -18,6 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        opacityBlack: 'var(--opacityBlack)',
         header: 'var(--header)',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

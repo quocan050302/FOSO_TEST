@@ -36,6 +36,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
     --header: #003da0;
+    --opacityBlack: #3a3e4c;
   }
   .dark {
     --background: 0 0% 3.9%;

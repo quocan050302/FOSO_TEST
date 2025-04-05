@@ -31,3 +31,13 @@ export type TProgressData = {
   completed: number,
   percent: number
 };
+
+
+export type  TMaterial = {
+    id: number;
+    name: string;
+    code: string;
+    type: string;
+    unit: string;
+    quantity: number;
+  }
