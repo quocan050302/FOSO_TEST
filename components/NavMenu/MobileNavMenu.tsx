@@ -10,7 +10,7 @@ import user from '../../public/assets/images/user.png';
 
 const MobileNavMenu = () => {
   return (
-    <div className="2xl:hidden">
+    <div className="xl:hidden">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <div className="flex items-center space-x-1 cursor-pointer">

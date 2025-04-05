@@ -1,58 +1,23 @@
 'use client';
 
 import React from 'react';
-import {
-  Bell,
-  ChevronDown,
-  HelpCircle,
-  Menu,
-  Search,
-  Settings,
-} from 'lucide-react';
+import { Bell, ChevronDown, HelpCircle, Search, Settings } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../public/assets/images/logo.png';
 import user from '../../public/assets/images/user.png';
 import { navLinks } from '@/constant/navLinks';
 import MobileNavMenu from '@/components/NavMenu/MobileNavMenu';
+import Sidebar from '@/components/Sidebar/Sidebar';
 
 const Header: React.FC = () => {
   return (
     <header className="bg-header text-white sticky top-0 left-0 z-10">
       <div className="container mx-auto py-4 flex items-center justify-between max-[768px]:px-4">
         <div className="flex items-center gap-2">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="flex w-5 h-5 justify-start xl:hidden text-white"
-              >
-                <Menu className="" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent
-              side="left"
-              className="bg-header text-white w-64 z-[1001]"
-            >
-              <div className="flex flex-col space-y-4 mt-6">
-                {navLinks.map((text, idx) => (
-                  <Link
-                    key={idx}
-                    href="/"
-                    className="hover:bg-white/10 transition-all px-3 py-2 rounded"
-                  >
-                    {text}
-                  </Link>
-                ))}
-              </div>
-            </SheetContent>
-          </Sheet>
-
-          <Link href="/">
+          <Sidebar />
+          <Link href="/" className="flex-shrink-0">
             <Image
               width={120}
               height={40}
@@ -62,20 +27,28 @@ const Header: React.FC = () => {
             />
           </Link>
 
-          <nav className="hidden xl:flex space-x-4 text-sm ml-8">
+          <nav className="hidden xl:flex text-sm ml-6">
             {navLinks.map((text, idx) => (
               <Link
                 key={idx}
                 href="/"
-                className="hover:bg-white/10 transition-all px-2 py-1 rounded"
+                className="hover:bg-white/10 transition-all px-3 py-1 rounded"
               >
                 {text}
               </Link>
             ))}
           </nav>
         </div>
+        <div className="relative flex justify-end mr-5 ml-auto max-[480px]:hidden xl:hidden">
+          <Search className="absolute left-2 top-2.5 h-4 w-4 text-white/70" />
+          <Input
+            type="search"
+            placeholder="Tìm kiếm"
+            className="bg-white/20 border-none text-white pl-8 w-64 placeholder:text-white/70 focus-visible:ring-blue-500"
+          />
+        </div>
 
-        <div className="hidden 2xl:flex items-center gap-3">
+        <div className="hidden xl:flex items-center gap-3">
           <div className="relative hidden md:block">
             <Search className="absolute left-2 top-2.5 h-4 w-4 text-white/70" />
             <Input
