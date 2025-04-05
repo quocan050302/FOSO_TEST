@@ -8,8 +8,8 @@ import arDown from '../../../../public/assets/images/ar-down.png';
 const TopProduct: React.FC = () => {
   return (
     <div className="mb-8">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg font-medium">
+      <div className="flex justify-between items-center mb-4 gap-4">
+        <h2 className="text-md md:text-lg font-medium">
           Top Sản Phẩm Sản Xuất Nhiều Nhất
         </h2>
         <div className="flex items-center space-x-2 bg-white border rounded-md px-3 py-1.5 text-sm">
@@ -19,7 +19,7 @@ const TopProduct: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 min-[430px]:grid-cols-2 md:grid-cols-5 gap-4">
         {topProducts.map((item, index) => (
           <div
             key={index}

@@ -1,3 +1,4 @@
+'use client';
 import { Calendar, ChevronDown } from 'lucide-react';
 import React from 'react';
 import { ProductionBarChart } from './ProductionBarChart';
@@ -13,7 +14,7 @@ const ProductPlan: React.FC = () => {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
       <div className="bg-white rounded-lg p-6 shadow-of-card">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-lg font-medium">Kế Hoạch Sản Xuất</h2>
+          <h2 className="text-md md:text-lg font-medium">Kế Hoạch Sản Xuất</h2>
           <CustomSelect
             initialValue={'Quý này'}
             data={fakeDataKHSX}
@@ -24,8 +25,8 @@ const ProductPlan: React.FC = () => {
       </div>
 
       <div className="bg-white  rounded-lg p-6 shadow-of-card">
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-lg font-medium">
+        <div className="flex justify-between items-center mb-4 gap-4">
+          <h2 className="text-md md:text-lg font-medium">
             Top 5 Khách Hàng Có Sản Lượng Nhiều Nhất
           </h2>
           <CustomSelect

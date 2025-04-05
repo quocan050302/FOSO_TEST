@@ -13,7 +13,11 @@ const CustomPieChart: React.FC<TPieChart> = ({ data, centerText }) => {
 
   if (!isClient) return null;
   return (
-    <PieChart width={500} height={300}>
+    <PieChart
+      width={500}
+      height={300}
+      className="max-[768px]:!w-full max-[768px]:!h-auto"
+    >
       <Pie
         data={data}
         dataKey="value"

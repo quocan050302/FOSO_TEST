@@ -3,17 +3,6 @@ import localFont from 'next/font/local';
 import './globals.css';
 import Providers from './providers';
 
-const geistSans = localFont({
-  src: '../public/assets/fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-});
-const geistMono = localFont({
-  src: '../public/assets/fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 400 900',
-});
-
 const geistLexend = localFont({
   src: '../public/assets/fonts/Lexend/LexendDeca-VariableFont_wght.ttf',
   variable: '--font-geist-lexend',

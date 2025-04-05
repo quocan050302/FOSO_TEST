@@ -15,11 +15,11 @@ import logo from '../../../../public/assets/images/lg-filter.png';
 
 export function MaterialsTable() {
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto whitespace-nowrap w-full">
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[80px]">STT</TableHead>
+            <TableHead className="w-10 md:w-[80px]">STT</TableHead>
             <TableHead>Nguyên vật liệu</TableHead>
             <TableHead>Đơn vị tính</TableHead>
             <TableHead className="text-right">Số lượng</TableHead>
