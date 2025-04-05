@@ -1,4 +1,3 @@
-import { FaCaretDown } from 'react-icons/fa';
 import {
   Select,
   SelectContent,
@@ -6,9 +5,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Calendar } from 'lucide-react';
 import { TSelectComponent } from './typings';
-import { Icon } from '@radix-ui/react-select';
 
 const CustomSelect: React.FC<TSelectComponent> = ({
   initialValue,

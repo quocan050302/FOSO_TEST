@@ -5,7 +5,6 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Bell, ChevronDown, HelpCircle, Settings } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import user from '../../public/assets/images/user.png';
 

@@ -13,10 +13,18 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from '@/components/ui/chart';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { customers } from '@/constant/dummyData';
 
 export const TopCustomers: React.FC = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
+
   const formattedData = customers.map((customer) => ({
     name: customer.name,
     production: customer.value,
