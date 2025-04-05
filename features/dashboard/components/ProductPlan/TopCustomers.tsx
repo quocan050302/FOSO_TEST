@@ -31,7 +31,7 @@ export const TopCustomers: React.FC = () => {
   }));
 
   return (
-    <div className="w-full overflow-auto h-[400px] sm:h-[350px] md:h-[400px] lg:h-[250px]">
+    <div className="w-full overflow-auto h-[400px] sm:h-[350px] md:h-[400px] ">
       <ChartContainer
         style={{ height: '100%' }}
         config={{
