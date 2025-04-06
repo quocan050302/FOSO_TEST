@@ -10,16 +10,16 @@ export const ProductionPieChart: React.FC = () => {
   const totalOrders = productMethod.reduce((sum, item) => sum + item.value, 0);
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-full">
       <CustomPieChart
         centerText={{ title: 'Lệnh sản xuất', value: totalOrders }}
-        data={productMethod}
+        data={productMethod ?? []}
       />
-      <div className="grid grid-cols-3 gap-2 mt-4 text-center w-full">
+      <div className="grid grid-cols-3 gap-2 mt-4 w-full">
         {productMethod.map((item, index) => (
           <div
             key={index}
-            className="shadow-of-card p-3 rounded-md col-span-1 border border-[#DDDDE2]"
+            className="shadow-of-card p-2 !rounded-[8px] col-span-1 border border-[#DDDDE2]"
           >
             <div style={{ color: item.color }} className="text-2xl font-bold">
               {item.value}

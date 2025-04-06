@@ -4,8 +4,8 @@ import React from 'react';
 
 export const ProductionTeam: React.FC = () => {
   return (
-    <div className="space-y-4 w-full">
-      {progressData.map((item, index) => (
+    <div className="space-y-3 w-full h-full">
+      {(progressData || []).map((item, index) => (
         <div key={index} className="space-y-4">
           <div className="flex justify-between text-sm">
             <span>{item.name}</span>

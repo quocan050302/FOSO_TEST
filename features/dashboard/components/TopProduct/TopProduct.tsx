@@ -27,10 +27,10 @@ const TopProduct: React.FC = () => {
           >
             <div>
               <div className="text-3xl font-bold text-[#3276fa] mb-1">
-                {item.number}
+                {item.number ?? 0}
               </div>
               <div className="text-sm text-gray-600 mb-2 font-medium">
-                {item.label}
+                {item.label ?? 'Chưa có mặt hàng'}
               </div>
             </div>
             <div className="flex items-center text-xs self-start ">
@@ -41,7 +41,7 @@ const TopProduct: React.FC = () => {
                 alt="arr-error"
                 src={item.up ? arUp : arDown}
               ></Image>
-              <span className="text-[#3A3E4C]">{item.percent}%</span>
+              <span className="text-[#3A3E4C]">{item.percent ?? 0}%</span>
             </div>
           </div>
         ))}
